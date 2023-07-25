@@ -6,7 +6,7 @@ require 'git-up/version'
 class GitUp
   def run(argv)
     @fetch = true
-    
+
     process_args(argv)
 
     if @fetch
@@ -18,7 +18,7 @@ class GitUp
       system(*command)
       raise GitError, "`git fetch` failed" unless $? == 0
     end
-    
+
     @remote_map = nil # flush cache after fetch
 
     Grit::Git.with_timeout(0) do
@@ -100,7 +100,7 @@ BANNER
   end
 
   def rebase_all_branches
-    col_width = branches.map { |b| b.name.length }.max + 1
+    col_width = branches.map { |b| b.name.length }.max.to_i + 1
 
     branches.each do |branch|
       remote = remote_map[branch.name]
