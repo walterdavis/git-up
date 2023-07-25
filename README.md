@@ -3,6 +3,20 @@ git-up(1) -- fetch and rebase all locally-tracked remote branches
 
 [![Code Climate](https://codeclimate.com/github/aanand/git-up.png)](https://codeclimate.com/github/aanand/git-up)
 
+## Forked, because git is not at 2.9 yet in AppleWorld
+
+If you haven't already, install `specific_install`:
+
+```
+gem install specific_install
+```
+
+Then use it to install from this fork:
+
+```
+gem specific_install -l https://github.com/walterdavis/git-up.git
+```
+
 WARNING
 -------
 
